@@ -35,7 +35,7 @@ goto end
 %SPHINXBUILD% -M help %SOURCEDIR% %BUILDDIR% %SPHINXOPTS%
 
 :html-zh
-%SPHINXBUILD% -M html %SOURCEDIR% %BUILDDIR% -D language=zh-hans
+%SPHINXBUILD% -M html %SOURCEDIR% %BUILDDIR% -D language=zh_CN
 
 :gettext
 %SPHINXBUILD% %SOURCEDIR% locales/pot -b gettext -E -D gettext_compact=0 -d _build/.doctrees

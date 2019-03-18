@@ -13,7 +13,7 @@ help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
 
 html-zh: clean
-	@$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" -D language=zh-hans $(O)
+	@$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" -D language=zh_CN $(O)
 
 gettext:
 	@$(SPHINXBUILD) "$(SOURCEDIR)" locales/pot -b gettext -E -D gettext_compact=0 -d _build/.doctrees $(O)
