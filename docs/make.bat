@@ -12,6 +12,8 @@ set BUILDDIR=_build
 set SPHINXPROJ=pipenv
 
 if "%1" == "" goto help
+if "%1" == "html-zh" goto html-zh
+if "%1" == "gettext" goto gettext
 
 %SPHINXBUILD% >NUL 2>NUL
 if errorlevel 9009 (
@@ -31,6 +33,12 @@ goto end
 
 :help
 %SPHINXBUILD% -M help %SOURCEDIR% %BUILDDIR% %SPHINXOPTS%
+
+:html-zh
+%SPHINXBUILD% -M html %SOURCEDIR% %BUILDDIR% -D language=zh-hans
+
+:gettext
+%SPHINXBUILD% %SOURCEDIR% locales/pot -b gettext -E -D gettext_compact=0 -d _build/.doctrees
 
 :end
 popd
