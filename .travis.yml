@@ -1,11 +1,7 @@
-
 language: python
-
 python:
-  - 3.6
-
+- 3.6
 install: pip install -r docs/requirements.txt
-
 before_script: |
   git config --global user.email "circleci-build-bot@example.com"
   git config --global user.name "Autobuild bot on CircleCI"
@@ -14,7 +10,6 @@ before_script: |
   git remote -v
   git fetch upstream
   git merge --no-ff upstream/master -m "Merge remote-tracking branch 'upstream/master' into doc_zh by Autobuild bot"
-
 script: |
   cd docs
   make gettext
@@ -23,6 +18,8 @@ script: |
   if [ $(git status -s | wc -l) -eq 0 ]; then echo "nothing to update"; exit 0; fi
   git commit -a -m "[skip ci] Update .pot files"
   git push --tags "https://${GH_TOKEN}@github.com/frostming/pipenv.git" doc_zh
-
 notifications:
-    email: false
+  email: false
+env:
+  global:
+    secure: CqF35ljAIlIN9pjzBtlcqBaNIOxOZ69AgGPjuHM4T4Cz94GtPtF6ydXr14dM7DmERuBHBTWAHO8BJ/mYQ2Wh1fcBqhP9vmWM5Ow8RHVBP1/dsAVhJjI1YvEQbGOJcXqmiWAVy65QgyptKf3CqB41S7DIRHVW4wk8VJdriA99gQ8hE7jhXZmH5Yez1vlY3E+B68OrsU2zT9gpY7nQeZIKPg7CxlRQQ12nyfXa0LDAyXDqSDEcBg7LhKKB/VIC54w2xp5S6NgUfOVYrnB+GLE9SCz4IDKJ7v1kyIfzMd840iczYHpOq7qvd7CD98tu3JApxKpID06WNffWRMjYgrd06PyvjLKMpPAlUuoWWlNHL19sIOxKqGpTs0GIGpDFRPL1ruB2NJC19pu4jPIIfPu1Pc/UfJJ8WFicNM7Px/wFpXE3tOhVRDLe7FKCM7nJAtn3QEUTO1Y/PKqW5J5R28ZsJ0JbXKVQov7oZdxcG6Pt2DEIv8SPozA64UhVoDaqabV81m+yrP4LXNSDvqA8BxfW2OuZOul9ncyQzDdprkeuxO+nzb61hfifh3d7236ke0gqw5uglzIq00cnroyAswjXpCvGfp8Jl/r2jGibJFlcEUW9POtgQE/h8OvTQG9FXv70Z8Ji8PEOAseQjrcM+rZILQWP009c3nOR1vtkphOQ71E=
