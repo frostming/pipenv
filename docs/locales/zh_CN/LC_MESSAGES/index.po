@@ -2,10 +2,10 @@
 # Copyright (C) 2017. A <a href="http://kennethreitz.com/pages/open-projects.html">Kenneth Reitz</a> Project
 # This file is distributed under the same license as the pipenv package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Frost Ming <mianghong@gmail.com>, 2019
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -31,7 +31,7 @@ msgid ""
 "(bundler, composer, npm, cargo, yarn, etc.) to the Python world. *Windows is"
 " a first-class citizen, in our world.*"
 msgstr ""
-"**Pipenv**的目标是把所有包管理工具(bundler, composer, npm, cargo, "
+"**Pipenv** 的目标是把所有包管理工具(bundler, composer, npm, cargo, "
 "yarn等)中的最佳实践带到Python的世界。 *Windows在这里是第一等公民。*"
 
 #: ../../index.rst:25
