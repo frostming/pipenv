@@ -1,0 +1,26 @@
+
+language: python
+
+python:
+  - 3.6
+
+install: pip install -r docs/requirements.txt
+
+script: |
+  git config --global user.email "circleci-build-bot@example.com"
+  git config --global user.name "Autobuild bot on CircleCI"
+  git checkout doc_zh
+  git remote add upstream https://github.com/pypa/pipenv.git
+  git remote -v
+  git fetch upstream
+  git merge --no-ff upstream/master -m "Merge remote-tracking branch 'upstream/master' into doc_zh by Autobuild bot"
+  cd docs
+  make gettext
+  ls locales/pot
+  git add -f locales/pot
+  if [ $(git status -s | wc -l) -eq 0 ]; then echo "nothing to update"; exit 0; fi
+  git commit -a -m "[skip ci] Update .pot files"
+  git push --tags "https://${GH_TOKEN}@github.com/frostming/pipenv.git" doc_zh
+
+notifications:
+    email: false
