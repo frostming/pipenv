@@ -1,0 +1,577 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017. A <a href="http://kennethreitz.com/pages/open-projects.html">Kenneth Reitz</a> Project
+# This file is distributed under the same license as the pipenv package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Frost Ming <mianghong@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipenv 2018.11.27.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-18 13:38+0800\n"
+"PO-Revision-Date: 2019-03-18 05:40+0000\n"
+"Last-Translator: Frost Ming <mianghong@gmail.com>, 2019\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/pipenv-tr/teams/97305/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../index.rst:7
+msgid "Pipenv: Python Dev Workflow for Humans"
+msgstr "为人类服务的Python开发工作流工具"
+
+#: ../../index.rst:23
+msgid ""
+"**Pipenv** is a tool that aims to bring the best of all packaging worlds "
+"(bundler, composer, npm, cargo, yarn, etc.) to the Python world. *Windows is"
+" a first-class citizen, in our world.*"
+msgstr ""
+"**Pipenv**的目标是把所有包管理工具(bundler, composer, npm, cargo, "
+"yarn等)中的最佳实践带到Python的世界。 *Windows在这里是第一等公民。*"
+
+#: ../../index.rst:25
+msgid ""
+"It automatically creates and manages a virtualenv for your projects, as well"
+" as adds/removes packages from your ``Pipfile`` as you install/uninstall "
+"packages. It also generates the ever-important ``Pipfile.lock``, which is "
+"used to produce deterministic builds."
+msgstr ""
+"它能为你的项目自动创建、管理虚拟环境，同时，当你安装、卸载包时，它能自动在你的 ``Pipfile`` 中添加、删除记录。它还会为你生成一个相当重要的 "
+"``Pipfile.lock`` 文件，用来产生一致性的构建。"
+
+#: ../../index.rst:27
+msgid ""
+"Pipenv is primarily meant to provide users and developers of applications "
+"with an easy method to setup a working environment. For the distinction "
+"between libraries and applications and the usage of ``setup.py`` vs "
+"``Pipfile`` to define dependencies, see :ref:`pipfile-vs-setuppy`."
+msgstr ""
+"Pipenv的主要目的是为应用的开发者和使用者能容易地设置好一个工作环境。关于库与应用的区别以及 ``setup.py`` 与 ``Pipfile`` "
+"在指定依赖上的使用，请参考 :ref:`pipfile-vs-setuppy` 。"
+
+#: ../../index.rst:35
+msgid "The problems that Pipenv seeks to solve are multi-faceted:"
+msgstr "Pipenv要解决的问题，是多方面的："
+
+#: ../../index.rst:37
+msgid ""
+"You no longer need to use ``pip`` and ``virtualenv`` separately. They work "
+"together."
+msgstr "你无需再分开使用 ``pip`` 和 ``virtualenv`` 了，他们是一起工作的。"
+
+#: ../../index.rst:38
+msgid ""
+"Managing a ``requirements.txt`` file `can be problematic "
+"<https://www.kennethreitz.org/essays/a-better-pip-workflow>`_, so Pipenv "
+"uses ``Pipfile`` and ``Pipfile.lock`` to separate abstract dependency "
+"declarations from the last tested combination."
+msgstr ""
+"管理一个 ``requirements.txt` `文件 `可能会有很多问题 "
+"<https://www.kennethreitz.org/essays/a-better-pip-workflow>`_ ，所以Pipenv使用 "
+"``Pipfile`` 与 ``Pipfile.lock`` 来将抽象依赖声明与最近的已验证的依赖版本分离。"
+
+#: ../../index.rst:39
+msgid ""
+"Hashes are used everywhere, always. Security. Automatically expose security "
+"vulnerabilities."
+msgstr "在各处都尽可能使用哈希值。自动暴露安全缺陷。"
+
+#: ../../index.rst:40
+msgid ""
+"Strongly encourage the use of the latest versions of dependencies to "
+"minimize security risks `arising from outdated components "
+"<https://www.owasp.org/index.php/Top_10-2017_A9-Using_Components_with_Known_Vulnerabilities>`_."
+msgstr ""
+"为了尽量避免 `过期组件的安全漏洞 "
+"<https://www.owasp.org/index.php/Top_10-2017_A9-Using_Components_with_Known_Vulnerabilities>`_"
+" ，强烈鼓励使用依赖的最新版本。"
+
+#: ../../index.rst:41
+msgid "Give you insight into your dependency graph (e.g. ``$ pipenv graph``)."
+msgstr "让你看到你的依赖图 ( ``$ pipenv graph`` )"
+
+#: ../../index.rst:42
+msgid "Streamline development workflow by loading ``.env`` files."
+msgstr "通过 ``.env`` 文件让开发工作流水化。"
+
+#: ../../index.rst:44
+msgid "You can quickly play with Pipenv right in your browser:"
+msgstr "你可以在你的浏览器中快速预览Pipenv"
+
+#: ../../index.rst:52
+msgid "Install Pipenv Today!"
+msgstr "今天就安装Pipenv吧！"
+
+#: ../../index.rst:54
+msgid ""
+"If you're on MacOS, you can install Pipenv easily with Homebrew. You can "
+"also use Linuxbrew on Linux using the same command::"
+msgstr ""
+"如果你在用MacOS，你可以使用Homebrew方便地安装Pipenv。你也可以在Linux系统上的Linuxbrew中使用相同的命令 ::"
+
+#: ../../index.rst:58
+msgid "Or, if you're using Fedora 28::"
+msgstr "或者，如果你用的是Fedora 28 ::"
+
+#: ../../index.rst:62
+msgid ""
+"Otherwise, refer to the :ref:`installing-pipenv` chapter for instructions."
+msgstr "如果你的系统不在上述列表中，参考 :ref:`installing-pipenv` 一章中的安装指引。"
+
+#: ../../index.rst:64
+msgid "✨🍰✨"
+msgstr "✨🍰✨"
+
+#: ../../index.rst:73
+msgid "User Testimonials"
+msgstr "用户推荐语"
+
+#: ../../index.rst:76
+msgid "**David Gang**—"
+msgstr "**David Gang**—"
+
+#: ../../index.rst:76
+msgid ""
+"*This package manager is really awesome. For the first time I know exactly "
+"what my dependencies are which I installed and what the transitive "
+"dependencies are. Combined with the fact that installs are deterministic, "
+"makes this package manager first class, like cargo*."
+msgstr ""
+"*这个包管理工具真的太好用了。我有生第一次知道了我安装了哪些依赖和哪些过渡依赖。再加上依赖的安装是确定性的，使得这个包管理工具成为人们的优先选择，就像cargo*"
+" 。"
+
+#: ../../index.rst:79
+msgid "**Justin Myles Holmes**—"
+msgstr "**Justin Myles Holmes**—"
+
+#: ../../index.rst:79
+msgid ""
+"*Pipenv is finally an abstraction meant to engage the mind instead of merely"
+" the filesystem.*"
+msgstr "*终于出现了Pipenv这样的良好的抽象层，它占据你的大脑，而不仅仅是文件系统*。"
+
+#: ../../index.rst:82
+msgid "☤ Pipenv Features"
+msgstr "☤ Pipenv的特性"
+
+#: ../../index.rst:84
+msgid ""
+"Enables truly *deterministic builds*, while easily specifying *only what you"
+" want*."
+msgstr "支持真正的  *一致性构建* ，只需简单的指定 *你想要什么*。"
+
+#: ../../index.rst:85
+msgid "Generates and checks file hashes for locked dependencies."
+msgstr "从锁定的依赖中生成文件哈希值用来做校验。"
+
+#: ../../index.rst:86
+msgid "Automatically install required Pythons, if ``pyenv`` is available."
+msgstr "在 ``pyenv`` 可用时，自动安装需要的Python版本。"
+
+#: ../../index.rst:87
+msgid ""
+"Automatically finds your project home, recursively, by looking for a "
+"``Pipfile``."
+msgstr "通过搜索 ``Pipfile`` ，自动地递归查找项目根目录。"
+
+#: ../../index.rst:88
+msgid "Automatically generates a ``Pipfile``, if one doesn't exist."
+msgstr "如果 ``Pipfile`` 不存在，自动为你生成一个。"
+
+#: ../../index.rst:89
+msgid "Automatically creates a virtualenv in a standard location."
+msgstr "在标准位置自动创建一个虚拟环境。"
+
+#: ../../index.rst:90
+msgid ""
+"Automatically adds/removes packages to a ``Pipfile`` when they are "
+"un/installed."
+msgstr "当你安装/卸载包时，自动在 ``Pipfile`` 中添加/删除记录。"
+
+#: ../../index.rst:91
+msgid "Automatically loads ``.env`` files, if they exist."
+msgstr "若探测到 ``.env`` 文件存在，自动加载它。"
+
+#: ../../index.rst:93
+msgid ""
+"The main commands are ``install``, ``uninstall``, and ``lock``, which "
+"generates a ``Pipfile.lock``. These are intended to replace ``$ pip "
+"install`` usage, as well as manual virtualenv management (to activate a "
+"virtualenv, run ``$ pipenv shell``)."
+msgstr ""
+"主要的命令有 ``install`` ， ``uninstall`` ，和用来生成 ``Pipfile.lock`` 的 ``lock`` "
+"命令。这些命令可以取代 ``$ pip install`` , 以及人工管理虚拟环境(要激活一个虚拟环境，可以运行 ``$ pipenv shell``"
+" )。"
+
+#: ../../index.rst:96
+msgid "Basic Concepts"
+msgstr "基本概念"
+
+#: ../../index.rst:98
+msgid "A virtualenv will automatically be created, when one doesn't exist."
+msgstr "如果虚拟环境不存在，会被自动创建。"
+
+#: ../../index.rst:99
+msgid ""
+"When no parameters are passed to ``install``, all packages ``[packages]`` "
+"specified will be installed."
+msgstr "``install`` 命令后面如果不带参数，则安装 ``[packages]`` 下面所有的包。"
+
+#: ../../index.rst:100
+msgid ""
+"To initialize a Python 3 virtual environment, run ``$ pipenv --three``."
+msgstr "使用 ``$ pipenv --three`` 来指定用Python 3初始化虚拟环境。"
+
+#: ../../index.rst:101
+msgid "To initialize a Python 2 virtual environment, run ``$ pipenv --two``."
+msgstr "使用 ``$ pipenv --two`` 来指定用Python 2初始化虚拟环境。"
+
+#: ../../index.rst:102
+msgid "Otherwise, whatever virtualenv defaults to will be the default."
+msgstr "否则，和 ``virtualenv`` 一样，使用默认的Python版本。"
+
+#: ../../index.rst:107
+msgid "Other Commands"
+msgstr "其他命令"
+
+#: ../../index.rst:109
+msgid ""
+"``graph`` will show you a dependency graph of your installed dependencies."
+msgstr "``graph`` 命令可以展示当前安装的包的依赖关系树。"
+
+#: ../../index.rst:110
+msgid ""
+"``shell`` will spawn a shell with the virtualenv activated. This shell can "
+"be deactivated by using ``exit``."
+msgstr "``shell`` 命令会启动一个激活了虚拟环境的shell，在此shell中可以使用 ``exist`` 退出。"
+
+#: ../../index.rst:111
+msgid ""
+"``run`` will run a given command from the virtualenv, with any arguments "
+"forwarded (e.g. ``$ pipenv run python`` or ``$ pipenv run pip freeze``)."
+msgstr ""
+"``run`` 命令可以在虚拟环境中运行一段给定的命令，并转发其他命令参数(比如： ``$ pipenv run python`` 或者 ``$ "
+"pipenv run pip freeze`` )。"
+
+#: ../../index.rst:112
+msgid ""
+"``check`` checks for security vulnerabilities and asserts that PEP 508 "
+"requirements are being met by the current environment."
+msgstr "``check`` 命令可以检查安全漏洞，以及当前环境是否满足PEP 508标签的要求。"
+
+#: ../../index.rst:116
+msgid "Further Documentation Guides"
+msgstr "进一步文档指南。"
+
+#: ../../index.rst:126
+msgid "Contribution Guides"
+msgstr "贡献指南"
+
+#: ../../index.rst:135
+msgid "☤ Pipenv Usage"
+msgstr "☤ Pipenv 用法"
+
+#: ../../index.rst:0 ../../index.rst:0 ../../index.rst:0 ../../index.rst:0
+#: ../../index.rst:0 ../../index.rst:0 ../../index.rst:0 ../../index.rst:0
+#: ../../index.rst:0 ../../index.rst:0 ../../index.rst:0 ../../index.rst:0
+msgid "Options"
+msgstr "选项"
+
+#: ../../../pipenv:1
+msgid "Output project home information."
+msgstr "显示项目目录信息。"
+
+#: ../../../pipenv:1
+msgid "Output virtualenv information."
+msgstr "显示虚拟环境信息。"
+
+#: ../../../pipenv:1
+msgid "Output Python interpreter information."
+msgstr "显示Python解释器信息。"
+
+#: ../../../pipenv:1
+msgid "Output Environment Variable options."
+msgstr "显示环境变量选项。"
+
+#: ../../../pipenv:1
+msgid "Remove the virtualenv."
+msgstr "删除虚拟环境。"
+
+#: ../../../pipenv:1 ../../../pipenv clean:1 ../../../pipenv graph:1
+#: ../../../pipenv sync:1 ../../../pipenv update:1
+msgid "Minimal output."
+msgstr "最小化输出。"
+
+#: ../../../pipenv:1
+msgid "Output completion (to be eval'd)."
+msgstr "显示自动补全(需要被eval)。"
+
+#: ../../../pipenv:1
+msgid "Display manpage."
+msgstr "显示手册页。"
+
+#: ../../../pipenv:1
+msgid "Output diagnostic information for use in GitHub issues."
+msgstr "显示诊断信息以供GitHub issue使用。"
+
+#: ../../../pipenv:1
+msgid "Enable site-packages for the virtualenv."
+msgstr "在虚拟环境中加入site-packages。"
+
+#: ../../../pipenv:1 ../../../pipenv check:1 ../../../pipenv clean:1
+#: ../../../pipenv install:1 ../../../pipenv lock:1 ../../../pipenv open:1
+#: ../../../pipenv run:1 ../../../pipenv shell:1 ../../../pipenv sync:1
+#: ../../../pipenv uninstall:1 ../../../pipenv update:1
+msgid "Specify which version of Python virtualenv should use."
+msgstr "指定虚拟环境使用的Python版本。"
+
+#: ../../../pipenv:1 ../../../pipenv check:1 ../../../pipenv clean:1
+#: ../../../pipenv install:1 ../../../pipenv lock:1 ../../../pipenv open:1
+#: ../../../pipenv run:1 ../../../pipenv shell:1 ../../../pipenv sync:1
+#: ../../../pipenv uninstall:1 ../../../pipenv update:1
+msgid "Use Python 3/2 when creating virtualenv."
+msgstr "使用Python 3或2创建虚拟环境。"
+
+#: ../../../pipenv:1 ../../../pipenv check:1 ../../../pipenv install:1
+#: ../../../pipenv lock:1 ../../../pipenv open:1 ../../../pipenv run:1
+#: ../../../pipenv sync:1 ../../../pipenv uninstall:1 ../../../pipenv update:1
+msgid "Clears caches (pipenv, pip, and pip-tools)."
+msgstr "清除缓存(pipenv, pip, pip-tools)。"
+
+#: ../../../pipenv:1 ../../../pipenv check:1 ../../../pipenv clean:1
+#: ../../../pipenv install:1 ../../../pipenv lock:1 ../../../pipenv open:1
+#: ../../../pipenv run:1 ../../../pipenv sync:1 ../../../pipenv uninstall:1
+#: ../../../pipenv update:1
+msgid "Verbose mode."
+msgstr "详细输出模式。"
+
+#: ../../../pipenv:1 ../../../pipenv check:1 ../../../pipenv install:1
+#: ../../../pipenv lock:1 ../../../pipenv open:1 ../../../pipenv run:1
+#: ../../../pipenv shell:1 ../../../pipenv sync:1 ../../../pipenv uninstall:1
+#: ../../../pipenv update:1
+msgid "Specify a PyPI mirror."
+msgstr "指定一个PyPI镜像。"
+
+#: ../../../pipenv:1
+msgid "Show the version and exit."
+msgstr "显示版本信息并退出。"
+
+#: ../../../pipenv check:1
+msgid ""
+"Checks for security vulnerabilities and against PEP 508 markers provided in "
+"Pipfile."
+msgstr "检查安全漏洞，以及当前环境是否满足PEP 508标签的要求。"
+
+#: ../../../pipenv check:1
+msgid "Given a code path, show potentially unused dependencies."
+msgstr "通过给定的代码路径中显示可能未使用的依赖。"
+
+#: ../../../pipenv check:1
+msgid "Ignore specified vulnerability during safety checks."
+msgstr "从安全检查中忽略某漏洞。"
+
+#: ../../../pipenv check:1 ../../../pipenv install:1
+msgid "System pip management."
+msgstr "管理系统pip。"
+
+#: ../../index.rst:0 ../../index.rst:0 ../../index.rst:0 ../../index.rst:0
+#: ../../index.rst:0 ../../index.rst:0 ../../index.rst:0
+msgid "Arguments"
+msgstr "参数"
+
+#: ../../../pipenv check:1 ../../../pipenv install:1 ../../../pipenv run:1
+#: ../../../pipenv shell:1 ../../../pipenv uninstall:1 ../../../pipenv
+#: update:1
+msgid "Optional argument(s)"
+msgstr "可选参数"
+
+#: ../../../pipenv clean:1
+msgid "Uninstalls all packages not specified in Pipfile.lock."
+msgstr "卸载所有未包含在Pipfile.lock中的依赖包。"
+
+#: ../../../pipenv clean:1
+msgid "Just output unneeded packages."
+msgstr "只显示不需要的包。"
+
+#: ../../../pipenv graph:1
+msgid "Displays currently-installed dependency graph information."
+msgstr "显示当前安装的依赖关系树信息。"
+
+#: ../../../pipenv graph:1
+msgid "Output JSON."
+msgstr "输出JSON。"
+
+#: ../../../pipenv graph:1
+msgid "Output JSON in nested tree."
+msgstr "以树形结构输出JSON。"
+
+#: ../../../pipenv graph:1
+msgid "Reversed dependency graph."
+msgstr "反向依赖关系树。"
+
+#: ../../../pipenv install:1
+msgid ""
+"Installs provided packages and adds them to Pipfile, or (if no packages are "
+"given), installs all packages from Pipfile."
+msgstr "安装给定的依赖包并添加到Pipfile中，或者(如果没有提供包名)，安装Pipfile中的所有依赖包。"
+
+#: ../../../pipenv install:1
+msgid "Install packages automatically discovered from import statements."
+msgstr "安装从import语句中自动发现的包。"
+
+#: ../../../pipenv install:1
+msgid "Abort if the Pipfile.lock is out-of-date, or Python version is wrong."
+msgstr "若Pipfile.lock已过期或Python版本不正确则终止退出。"
+
+#: ../../../pipenv install:1 ../../../pipenv uninstall:1
+msgid "Skip locking mechanisms and use the Pipfile instead during operation."
+msgstr "跳过锁定机制直接使用Pipfile。"
+
+#: ../../../pipenv install:1 ../../../pipenv uninstall:1 ../../../pipenv
+#: update:1
+msgid "An editable python package URL or path, often to a VCS repo."
+msgstr "一个可修改包的URL或路径，通常是一个版本控制仓库。"
+
+#: ../../../pipenv install:1 ../../../pipenv update:1
+msgid "Ignore Pipfile when installing, using the Pipfile.lock."
+msgstr "安装时忽略Pipfile，使用Pipfile.lock。"
+
+#: ../../../pipenv install:1 ../../../pipenv update:1
+msgid "Update specified packages."
+msgstr "更新指定依赖包。"
+
+#: ../../../pipenv install:1 ../../../pipenv install:1 ../../../pipenv lock:1
+#: ../../../pipenv sync:1 ../../../pipenv uninstall:1 ../../../pipenv update:1
+#: ../../../pipenv update:1
+msgid "Allow pre-releases."
+msgstr "允许预发布版本。"
+
+#: ../../../pipenv install:1 ../../../pipenv update:1
+msgid "Import a requirements.txt file."
+msgstr "导入requirements.txt文件。"
+
+#: ../../../pipenv install:1 ../../../pipenv update:1
+msgid ""
+"URLs to the extra PyPI compatible indexes to query for package lookups."
+msgstr "为包查找提供一个额外的PyPI兼容索引的URL。"
+
+#: ../../../pipenv install:1 ../../../pipenv update:1
+msgid "Target PyPI-compatible package index url."
+msgstr "PyPI兼容索引的URL。"
+
+#: ../../../pipenv install:1 ../../../pipenv sync:1 ../../../pipenv update:1
+msgid "Install dependencies one-at-a-time, instead of concurrently."
+msgstr "一个一个安装依赖，而不是并发方式。"
+
+#: ../../../pipenv install:1 ../../../pipenv lock:1 ../../../pipenv sync:1
+#: ../../../pipenv uninstall:1 ../../../pipenv update:1
+msgid "Keep out-dated dependencies from being updated in Pipfile.lock."
+msgstr "保持Pipfile.lock中的过期依赖不变。"
+
+#: ../../../pipenv install:1 ../../../pipenv lock:1 ../../../pipenv sync:1
+#: ../../../pipenv uninstall:1 ../../../pipenv update:1
+msgid "Install both develop and default packages."
+msgstr "安装开发依赖和默认依赖。"
+
+#: ../../index.rst:0 ../../index.rst:0 ../../index.rst:0
+msgid "Environment variables"
+msgstr "环境变量"
+
+#: ../../../pipenv install:1 ../../../pipenv uninstall:1
+msgid "Provide a default for :option:`--skip-lock`"
+msgstr "为 :option:`--skip-lock` 提供默认值。"
+
+#: ../../../pipenv install:1 ../../../pipenv update:1
+msgid "Provide a default for :option:`--extra-index-url`"
+msgstr "为 :option:`--extra-index-url` 提供默认值。"
+
+#: ../../../pipenv install:1 ../../../pipenv update:1
+msgid "Provide a default for :option:`-i`"
+msgstr "为 :option:`-i` 提供默认值。"
+
+#: ../../../pipenv lock:1
+msgid "Generates Pipfile.lock."
+msgstr "生成Pipfile.lock。"
+
+#: ../../../pipenv lock:1
+msgid "Generate output in requirements.txt format."
+msgstr "生成requirements.txt格式的输出。"
+
+#: ../../../pipenv open:1
+msgid "View a given module in your editor."
+msgstr "在编辑器中打开给定模块。"
+
+#: ../../../pipenv open:1
+msgid ""
+"This uses the EDITOR environment variable. You can temporarily override it, "
+"for example:"
+msgstr "这会使用EDITOR环境变量，你可以临时改变它，比如："
+
+#: ../../../pipenv open:1
+msgid "EDITOR=atom pipenv open requests"
+msgstr "EDITOR=atom pipenv open requests"
+
+#: ../../../pipenv open:1 ../../../pipenv run:1
+msgid "Required argument"
+msgstr "必需参数"
+
+#: ../../../pipenv run:1
+msgid "Spawns a command installed into the virtualenv."
+msgstr "在虚拟环境中调用一个已配置的命令。"
+
+#: ../../../pipenv shell:1
+msgid "Spawns a shell within the virtualenv."
+msgstr "在虚拟环境中启动一个shell环境。"
+
+#: ../../../pipenv shell:1
+msgid "Run in shell in fancy mode (for elegantly configured shells)."
+msgstr "。使用花哨模式启动shell (适用于精心配置的shell)。"
+
+#: ../../../pipenv shell:1
+msgid "Always spawn a subshell, even if one is already spawned."
+msgstr "总是启动一个新的shell，即使已经有了一个。"
+
+#: ../../../pipenv sync:1
+msgid "Installs all packages specified in Pipfile.lock."
+msgstr "安装Pipfile.lock中的所有依赖。"
+
+#: ../../../pipenv uninstall:1
+msgid "Un-installs a provided package and removes it from Pipfile."
+msgstr "卸载给定的依赖包同时从Pipfile中删除。"
+
+#: ../../../pipenv uninstall:1
+msgid "Un-install all package from [dev-packages]."
+msgstr "卸载[dev-packages]中所有的依赖包。"
+
+#: ../../../pipenv uninstall:1
+msgid "Purge all package(s) from virtualenv. Does not edit Pipfile."
+msgstr "从虚拟环境中删除所有依赖包，不改变Pipfile。"
+
+#: ../../../pipenv update:1
+msgid "Runs lock, then sync."
+msgstr "运行lock，然后sync。"
+
+#: ../../../pipenv update:1 ../../../pipenv update:1
+msgid "List out-of-date dependencies."
+msgstr "列出过期的依赖。"
+
+#: ../../index.rst:142
+msgid "Indices and tables"
+msgstr "索引与表格。"
+
+#: ../../index.rst:144
+msgid ":ref:`genindex`"
+msgstr ":ref:`genindex`"
+
+#: ../../index.rst:145
+msgid ":ref:`modindex`"
+msgstr ":ref:`modindex`"
+
+#: ../../index.rst:146
+msgid ":ref:`search`"
+msgstr ":ref:`search`"
