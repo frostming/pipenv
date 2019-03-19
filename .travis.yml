@@ -6,7 +6,7 @@ python:
 
 install: pip install -r docs/requirements.txt
 
-script: |
+before_script: |
   git config --global user.email "circleci-build-bot@example.com"
   git config --global user.name "Autobuild bot on CircleCI"
   git checkout doc_zh
@@ -14,6 +14,8 @@ script: |
   git remote -v
   git fetch upstream
   git merge --no-ff upstream/master -m "Merge remote-tracking branch 'upstream/master' into doc_zh by Autobuild bot"
+
+script: |
   cd docs
   make gettext
   ls locales/pot
