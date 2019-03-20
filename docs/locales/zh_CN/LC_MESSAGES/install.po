@@ -1,0 +1,315 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017. A <a href="http://kennethreitz.com/pages/open-projects.html">Kenneth Reitz</a> Project
+# This file is distributed under the same license as the pipenv package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Frost Ming <mianghong@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipenv 2018.11.27.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-18 13:38+0800\n"
+"PO-Revision-Date: 2019-03-18 05:40+0000\n"
+"Last-Translator: Frost Ming <mianghong@gmail.com>, 2019\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/pipenv-tr/teams/97305/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../install.rst:5
+msgid "Pipenv & Virtual Environments"
+msgstr "Pipenv与虚拟环境"
+
+#: ../../install.rst:9
+msgid "This tutorial walks you through installing and using Python packages."
+msgstr "这篇教程将带你安装与使用Python包。"
+
+#: ../../install.rst:11
+msgid ""
+"It will show you how to install and use the necessary tools and make strong "
+"recommendations on best practices. Keep in mind that Python is used for a "
+"great many different purposes, and precisely how you want to manage your "
+"dependencies may change based on how you decide to publish your software. "
+"The guidance presented here is most directly applicable to the development "
+"and deployment of network services (including web applications), but is also"
+" very well suited to managing development and testing environments for any "
+"kind of project."
+msgstr ""
+"它阐明了如何安装和使用必要的工具，强力推荐了一些最佳实践。时刻记住Python被用于非常多的场景，取决于你如何发布软件，依赖的具体管理方式也可能千差万别。这里展示的指引不仅对大多数开发部署环境和网络服务"
+" (包括web应用) 都是适用的，而且对于管理开发测试环境，也适用于任何类型的项目。"
+
+#: ../../install.rst:19
+msgid ""
+"This guide is written for Python 3, however, these instructions should work "
+"fine on Python 2.7—if you are still using it, for some reason."
+msgstr "这篇指引是基于Python 3编写的，但对Python 2.7也是适用的——如果你还在用的话。"
+
+#: ../../install.rst:24
+msgid "☤ Make sure you've got Python & pip"
+msgstr "☤ 确保你已经安装好了Python和pip"
+
+#: ../../install.rst:26
+msgid ""
+"Before you go any further, make sure you have Python and that it's available"
+" from your command line. You can check this by simply running::"
+msgstr "在进行接下来的步骤之前，请确保你已经安装好了Python并且可以从命令行启动。你可以用下面的简单的命令来做检查::"
+
+#: ../../install.rst:31
+msgid ""
+"You should get some output like ``3.6.2``. If you do not have Python, please"
+" install the latest 3.x version from `python.org`_ or refer to the "
+"`Installing Python`_ section of *The Hitchhiker's Guide to Python*."
+msgstr ""
+"你应该能看到类似于 ``3.6.2`` 的输出。如果你系统上没有Python，请从 `python.org`_ 安装最新的3.x版本，或者参考 "
+"*Python银河系漫游指南* 中的 `Installing Python`_ 一节。"
+
+#: ../../install.rst:35
+msgid "If you're newcomer and you get an error like this:"
+msgstr "如果你是新手并看到了这样的错误:"
+
+#: ../../install.rst:44
+msgid ""
+"It's because this command is intended to be run in a *shell* (also called a "
+"*terminal* or *console*). See the Python for Beginners `getting started "
+"tutorial`_ for an introduction to using your operating system's shell and "
+"interacting with Python."
+msgstr ""
+"这是因为这条命令应该在 *shell* (也称为 *终端* 或 *控制台*) 中运行。参考Python入门的  `getting started "
+"tutorial`_ 学习如何使用操作系统的shell与Python交互。"
+
+#: ../../install.rst:49
+msgid ""
+"Additionally, you'll need to make sure you have pip available. You can check"
+" this by running::"
+msgstr "此外，你还需要确保pip是可用的。你可以运行下面的命令来检查::"
+
+#: ../../install.rst:55
+msgid ""
+"If you installed Python from source, with an installer from `python.org`_, "
+"via `Homebrew`_ or via `Linuxbrew`_ you should already have pip. If you're "
+"on Linux and installed using your OS package manager, you may have to "
+"`install pip <https://pip.pypa.io/en/stable/installing/>`_ separately."
+msgstr ""
+"如果你从源代码安装Python，从 `python.org`_ 上提供的安装器，从 `Homebrew`_ 或是从 `Linuxbrew`_ "
+"安装，都应该自带了pip。但如果你是Linux用户并且通过系统的包管理器安装的Python，你可能需要单独安装 `pip "
+"<https://pip.pypa.io/en/stable/installing/>`_ 。"
+
+#: ../../install.rst:58
+msgid ""
+"If you plan to install Pipenv using Homebrew or Linuxbrew you can skip this "
+"step. The Homebrew/Linuxbrew installer takes care of pip for you."
+msgstr ""
+"如果你打算通过Homebrew或者Linuxbrew安装Python则可以跳过此步骤。Homebrew/Linuxbrew安装器会自动帮你装好pip。"
+
+#: ../../install.rst:71
+msgid "☤ Installing Pipenv"
+msgstr "☤ 安装Pipenv"
+
+#: ../../install.rst:73
+msgid ""
+"Pipenv is a dependency manager for Python projects. If you're familiar with "
+"Node.js' `npm`_ or Ruby's `bundler`_, it is similar in spirit to those "
+"tools. While pip can install Python packages, Pipenv is recommended as it's "
+"a higher-level tool that simplifies dependency management for common use "
+"cases."
+msgstr ""
+"Pipenv是Python项目的依赖管理工具。如果你对Node.js的 `npm`_ 或Ruby的 `bundler`_ "
+"熟悉的话，它们在理念上是相似的。虽然你可以用pip安装Python依赖包，但依然推荐使用Pipenv，它作为一个更高层的工具，在很多常见的场景下都能简化依赖的管理。"
+
+#: ../../install.rst:84
+msgid "☤ Homebrew Installation of Pipenv"
+msgstr "☤ 用Homebrew安装Pipenv"
+
+#: ../../install.rst:86
+msgid ""
+"`Homebrew`_ is a popular open-source package management system for macOS. "
+"For Linux users, `Linuxbrew`_  is a Linux port of that."
+msgstr "`Homebrew`_ 是一款macOS上的开源包管理系统。对于Linux用户，`Linuxbrew`是它的Linux移植版本。"
+
+#: ../../install.rst:88
+msgid ""
+"Installing pipenv via Homebrew or Linuxbrew will keep pipenv and all of its "
+"dependencies in an isolated virtual environment so it doesn't interfere with"
+" the rest of your Python installation."
+msgstr ""
+"通过Homebrew或Linuxbrew安装Pipenv时会将Pipenv及其依赖都放在一个隔离的虚拟环境中，这样就不会影响你其他的Python安装的包。"
+
+#: ../../install.rst:92
+msgid "Once you have installed Homebrew or Linuxbrew simply run::"
+msgstr "你装好了Homebrew或Linuxbrew之后只要运行::"
+
+#: ../../install.rst:96 ../../install.rst:139
+msgid "To upgrade pipenv at any time::"
+msgstr "在任何时候，如果要更新Pipenv::"
+
+#: ../../install.rst:102
+msgid "☤ Pragmatic Installation of Pipenv"
+msgstr "☤ 用普通方式安装Pipenv"
+
+#: ../../install.rst:104
+msgid ""
+"If you have a working installation of pip, and maintain certain "
+"\"toolchain\" type Python modules as global utilities in your user "
+"environment, pip `user installs <https://pip.pypa.io/en/stable/user_guide"
+"/#user-installs>`_ allow for installation into your home directory. Note "
+"that due to interaction between dependencies, you should limit tools "
+"installed in this way to basic building blocks for a Python workflow like "
+"virtualenv, pipenv, tox, and similar software."
+msgstr ""
+"如果你已经安装好了pip，并且将某些作为全局工具的「工具链」类型的Python模块放在你的用户目录中，pip的 `安装到用户 "
+"<https://pip.pypa.io/en/stable/user_guide/#user-installs>`_ "
+"将把包安装到你的home目录下。注意，由于依赖是会相互影响的，你应该将以这种方式安装的工具仅限于一些Python工作流相关的基础构建工具，如virtualenv，pipenv,"
+" tox及类似的软件。"
+
+#: ../../install.rst:106
+msgid "To install::"
+msgstr "安装方法::"
+
+#: ../../install.rst:110
+msgid ""
+"This does a `user installation`_ to prevent breaking any system-wide "
+"packages. If ``pipenv`` isn't available in your shell after installation, "
+"you'll need to add the `user base`_'s binary directory to your ``PATH``."
+msgstr ""
+"这会执行一次 `user installation`_ 来避免破坏系统的包。如果安装完成后 ``pipenv`` 在命令行中不可用，你需要把 `user"
+" base`_ 的二进制执行文件目录添加到 ``PATH`` 变量中。"
+
+#: ../../install.rst:114
+msgid ""
+"On Linux and macOS you can find the user base binary directory by running "
+"``python -m site --user-base`` and adding ``bin`` to the end. For example, "
+"this will typically print ``~/.local`` (with ``~`` expanded to the absolute "
+"path to your home directory) so you'll need to add ``~/.local/bin`` to your "
+"``PATH``. You can set your ``PATH`` permanently by `modifying ~/.profile`_."
+msgstr ""
+"在Linux和macOS上你可以使用 ``python -m site --user-base`` 的输出末尾加上 ``/bin`` "
+"来获取用户的二进制执行文件目录。举例来说，这一般会输出 ``~/.local`` ( ``~`` 展开成你的用户根目录的绝对路径)，所以你需要将 "
+"``~/.local/bin`` 加到你的 ``PATH`` 中。你可以通过修改 ``~/.profile`_ 文件永久设置 ``PATH`` 。"
+
+#: ../../install.rst:121
+msgid ""
+"On Windows you can find the user base binary directory by running ``python "
+"-m site --user-site`` and replacing ``site-packages`` with ``Scripts``. For "
+"example, this could return ``C:\\Users\\Username\\AppData\\Roaming\\Python36"
+"\\site-packages`` so you would need to set your ``PATH`` to include "
+"``C:\\Users\\Username\\AppData\\Roaming\\Python36\\Scripts``. You can set "
+"your user ``PATH`` permanently in the `Control Panel`_. You may need to log "
+"out for the ``PATH`` changes to take effect."
+msgstr ""
+"在Windows上，你可以运行 ``python -m site --user-site``，然后将输出中的 ``site-packages`` 替换为"
+" ``Scripts`` 即可得到用户的二进制执行文件目录。举例来说，如果它输出了 "
+"``C:\\Users\\Username\\AppData\\Roaming\\Python36\\site-packages`` ，你就要设置 "
+"``PATH`` , 加上 ``C:\\Users\\Username\\AppData\\Roaming\\Python36\\Scripts`` "
+"。你可以在 `Control Panel`_ 中永久设置 ``PATH`` 变量。为了让 ``PATH`` 的改变生效，可能需要注销。"
+
+#: ../../install.rst:130
+msgid ""
+"For more information, see the `user installs documentation "
+"<https://pip.pypa.io/en/stable/user_guide/#user-installs>`_."
+msgstr ""
+"更多信息，请参阅 `用户安装文档 <https://pip.pypa.io/en/stable/user_guide/#user-installs>`_"
+" 。"
+
+#: ../../install.rst:145
+msgid "☤ Crude Installation of Pipenv"
+msgstr "☤ 暴力安装Pipenv"
+
+#: ../../install.rst:147
+msgid ""
+"If you don't even have pip installed, you can use this crude installation "
+"method, which will bootstrap your whole system::"
+msgstr "如果你连pip都没有安装，你可以使用这个暴力安装法安装一整套系统::"
+
+#: ../../install.rst:153
+msgid "☤ Installing packages for your project"
+msgstr "☤ 在项目中安装依赖包"
+
+#: ../../install.rst:155
+msgid ""
+"Pipenv manages dependencies on a per-project basis. To install packages, "
+"change into your project's directory (or just an empty directory for this "
+"tutorial) and run::"
+msgstr "Pipenv是分项目管理依赖的。要安装依赖包，进入你的项目目录 (或者就一个空目录)，运行::"
+
+#: ../../install.rst:162
+msgid ""
+"Pipenv will install the excellent `Requests`_ library and create a "
+"``Pipfile`` for you in your project's directory. The ``Pipfile`` is used to "
+"track which dependencies your project needs in case you need to re-install "
+"them, such as when you share your project with others. You should get output"
+" similar to this (although the exact paths shown will vary)::"
+msgstr ""
+"这样，Pipenv就会将 `Requests`_ 这个优秀的库安装好，并且在你的项目目录中创建一个 ``Pipfile`` 文件。``Pipfile``"
+" 文件是用来跟踪项目需要的依赖，以备以后如果你将项目分享给其他人，重新安装时使用。你应该得到类似于下面的输出 (具体路径会有所不同)::"
+
+#: ../../install.rst:197
+msgid "☤ Using installed packages"
+msgstr "☤ 使用安装好的包"
+
+#: ../../install.rst:199
+msgid ""
+"Now that Requests is installed you can create a simple ``main.py`` file to "
+"use it:"
+msgstr "现在Requests已经安装好了，你可以创建一个简单的 ``main.py`` 文件来使用它："
+
+#: ../../install.rst:210
+msgid "Then you can run this script using ``pipenv run``::"
+msgstr "然后你可以使用 ``pipenv run`` 来运行此脚本::"
+
+#: ../../install.rst:214
+msgid "You should get output similar to this:"
+msgstr "你应该会得到类似于下面的输出："
+
+#: ../../install.rst:220
+msgid ""
+"Using ``$ pipenv run`` ensures that your installed packages are available to"
+" your script. It's also possible to spawn a new shell that ensures all "
+"commands have access to your installed packages with ``$ pipenv shell``."
+msgstr ""
+"使用 ``$ pipenv run`` 可以确保你安装好的包在你的脚本中可用。也可以通过 ``$ pipenv shell`` "
+"启动一个新的终端环境，在其中所有的命令都可以访问你安装好的包。"
+
+#: ../../install.rst:226
+msgid "☤ Virtualenv mapping caveat"
+msgstr "☤ 虚拟环境映射说明"
+
+#: ../../install.rst:228
+msgid "Pipenv automatically maps projects to their specific virtualenvs."
+msgstr "Pipenv会自动将项目映射到对应的虚拟环境。"
+
+#: ../../install.rst:229
+msgid ""
+"The virtualenv is stored globally with the name of the project’s root "
+"directory plus the hash of the full path to the project's root (e.g., "
+"``my_project-a3de50``)."
+msgstr "虚拟环境会以项目的根目录加上全路径的hash值作为环境名称 (例如 ``my_project-a3de50``) 存储起来。"
+
+#: ../../install.rst:230
+msgid ""
+"If you change your project's path, you break such a default mapping and "
+"pipenv will no longer be able to find and to use the project's virtualenv."
+msgstr "如果项目路径被更改，就会破坏这个默认的映射，这样pipenv就无法找到和使用项目的虚拟环境。"
+
+#: ../../install.rst:231
+msgid ""
+"You might want to set ``export PIPENV_VENV_IN_PROJECT=1`` in your "
+".bashrc/.zshrc (or any shell configuration file) for creating the virtualenv"
+" inside your project's directory, avoiding problems with subsequent path "
+"changes."
+msgstr ""
+"你可以在你的.bashrc/.zshrc (或者其他终端配置文件中) 加入 ``export PIPENV_VENV_IN_PROJECT=1`` "
+"来让虚拟环境创建到你的项目目录中，这样就避免了以后路径更改带来的问题。"
+
+#: ../../install.rst:235
+msgid "☤ Next steps"
+msgstr "☤ 后续步骤"
+
+#: ../../install.rst:237
+msgid ""
+"Congratulations, you now know how to install and use Python packages! ✨ 🍰 ✨"
+msgstr "恭喜，你已经学会了如何安装使用Python包！✨ 🍰 ✨"

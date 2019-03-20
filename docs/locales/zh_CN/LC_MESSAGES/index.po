@@ -2,10 +2,10 @@
 # Copyright (C) 2017. A <a href="http://kennethreitz.com/pages/open-projects.html">Kenneth Reitz</a> Project
 # This file is distributed under the same license as the pipenv package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 # Translators:
 # Frost Ming <mianghong@gmail.com>, 2019
-#
+# 
 #, fuzzy
 msgid ""
 msgstr ""
