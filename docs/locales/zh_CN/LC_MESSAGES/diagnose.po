@@ -1,0 +1,228 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017. A <a href="http://kennethreitz.com/pages/open-projects.html">Kenneth Reitz</a> Project
+# This file is distributed under the same license as the pipenv package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipenv 2018.11.27.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-18 13:38+0800\n"
+"PO-Revision-Date: 2019-03-18 05:40+0000\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/pipenv-tr/teams/97305/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../diagnose.rst:4
+msgid "Frequently Encountered Pipenv Problems"
+msgstr ""
+
+#: ../../diagnose.rst:6
+msgid ""
+"Pipenv is constantly being improved by volunteers, but is still a very young"
+" project with limited resources, and has some quirks that needs to be dealt "
+"with. We need everyone’s help (including yours!)."
+msgstr ""
+
+#: ../../diagnose.rst:10
+msgid ""
+"Here are some common questions people have using Pipenv. Please take a look "
+"below and see if they resolve your problem."
+msgstr ""
+
+#: ../../diagnose.rst:13
+msgid "**Make sure you’re running the newest Pipenv version first!**"
+msgstr ""
+
+#: ../../diagnose.rst:16
+msgid "☤ Your dependencies could not be resolved"
+msgstr ""
+
+#: ../../diagnose.rst:18
+msgid ""
+"Make sure your dependencies actually *do* resolve. If you’re confident they "
+"are, you may need to clear your resolver cache. Run the following command::"
+msgstr ""
+
+#: ../../diagnose.rst:23
+msgid "and try again."
+msgstr ""
+
+#: ../../diagnose.rst:25
+msgid ""
+"If this does not work, try manually deleting the whole cache directory. It "
+"is usually one of the following locations:"
+msgstr ""
+
+#: ../../diagnose.rst:28
+msgid "``~/Library/Caches/pipenv`` (macOS)"
+msgstr ""
+
+#: ../../diagnose.rst:29
+msgid "``%LOCALAPPDATA%\\pipenv\\pipenv\\Cache`` (Windows)"
+msgstr ""
+
+#: ../../diagnose.rst:30
+msgid "``~/.cache/pipenv`` (other operating systems)"
+msgstr ""
+
+#: ../../diagnose.rst:32
+msgid ""
+"Pipenv does not install prereleases (i.e. a version with an alpha/beta/etc. "
+"suffix, such as *1.0b1*) by default. You will need to pass the ``--pre`` "
+"flag in your command, or set"
+msgstr ""
+
+#: ../../diagnose.rst:41
+msgid "in your Pipfile."
+msgstr ""
+
+#: ../../diagnose.rst:44
+msgid "☤ No module named <module name>"
+msgstr ""
+
+#: ../../diagnose.rst:46
+msgid ""
+"This is usually a result of mixing Pipenv with system packages. We "
+"*strongly* recommend installing Pipenv in an isolated environment. Uninstall"
+" all existing Pipenv installations, and see :ref:`installing-pipenv` to "
+"choose one of the recommended way to install Pipenv instead."
+msgstr ""
+
+#: ../../diagnose.rst:52
+msgid "☤ My pyenv-installed Python is not found"
+msgstr ""
+
+#: ../../diagnose.rst:54
+msgid ""
+"Make sure you have ``PYENV_ROOT`` set correctly. Pipenv only supports "
+"CPython distributions, with version name like ``3.6.4`` or similar."
+msgstr ""
+
+#: ../../diagnose.rst:58
+msgid "☤ Pipenv does not respect pyenv’s global and local Python versions"
+msgstr ""
+
+#: ../../diagnose.rst:60
+msgid ""
+"Pipenv by default uses the Python it is installed against to create the "
+"virtualenv. You can set the ``--python`` option, or "
+"``$PYENV_ROOT/shims/python`` to let it consult pyenv when choosing the "
+"interpreter. See :ref:`specifying_versions` for more information."
+msgstr ""
+
+#: ../../diagnose.rst:65
+msgid ""
+"If you want Pipenv to automatically “do the right thing”, you can set the "
+"environment variable ``PIPENV_PYTHON`` to ``$PYENV_ROOT/shims/python``. This"
+" will make Pipenv use pyenv’s active Python version to create virtual "
+"environments by default."
+msgstr ""
+
+#: ../../diagnose.rst:73
+msgid "☤ ValueError: unknown locale: UTF-8"
+msgstr ""
+
+#: ../../diagnose.rst:75
+msgid ""
+"macOS has a bug in its locale detection that prevents us from detecting your"
+" shell encoding correctly. This can also be an issue on other systems if the"
+" locale variables do not specify an encoding."
+msgstr ""
+
+#: ../../diagnose.rst:79
+msgid ""
+"The workaround is to set the following two environment variables to a "
+"standard localization format:"
+msgstr ""
+
+#: ../../diagnose.rst:82
+msgid "``LC_ALL``"
+msgstr ""
+
+#: ../../diagnose.rst:83
+msgid "``LANG``"
+msgstr ""
+
+#: ../../diagnose.rst:85
+msgid ""
+"For Bash, for example, you can add the following to your "
+"``~/.bash_profile``:"
+msgstr ""
+
+#: ../../diagnose.rst:92
+msgid "For Zsh, the file to edit is ``~/.zshrc``."
+msgstr ""
+
+#: ../../diagnose.rst:94
+msgid ""
+"You can change both the ``en_US`` and ``UTF-8`` part to the language/locale "
+"and encoding you use."
+msgstr ""
+
+#: ../../diagnose.rst:98
+msgid "☤ /bin/pip: No such file or directory"
+msgstr ""
+
+#: ../../diagnose.rst:100
+msgid ""
+"This may be related to your locale setting. See :ref:`unknown-local-"
+"diagnose` for a possible solution."
+msgstr ""
+
+#: ../../diagnose.rst:105
+msgid "☤ ``shell`` does not show the virtualenv’s name in prompt"
+msgstr ""
+
+#: ../../diagnose.rst:107
+msgid ""
+"This is intentional. You can do it yourself with either shell plugins, or "
+"clever ``PS1`` configuration. If you really want it back, use"
+msgstr ""
+
+#: ../../diagnose.rst:114
+msgid "instead (not available on Windows)."
+msgstr ""
+
+#: ../../diagnose.rst:117
+msgid "☤ Pipenv does not respect dependencies in setup.py"
+msgstr ""
+
+#: ../../diagnose.rst:119
+msgid ""
+"No, it does not, intentionally. Pipfile and setup.py serve different "
+"purposes, and should not consider each other by default. See :ref:`pipfile-"
+"vs-setuppy` for more information."
+msgstr ""
+
+#: ../../diagnose.rst:124
+msgid "☤ Using ``pipenv run`` in Supervisor program"
+msgstr ""
+
+#: ../../diagnose.rst:126
+msgid ""
+"When you configure a supervisor program's ``command`` with ``pipenv run "
+"...``, you need to set locale enviroment variables properly to make it work."
+msgstr ""
+
+#: ../../diagnose.rst:129
+msgid ""
+"Add this line under ``[supervisord]`` section in "
+"``/etc/supervisor/supervisord.conf``::"
+msgstr ""
+
+#: ../../diagnose.rst:135
+msgid "☤ An exception is raised during ``Locking dependencies…``"
+msgstr ""
+
+#: ../../diagnose.rst:137
+msgid ""
+"Run ``pipenv lock --clear`` and try again. The lock sequence caches results "
+"to speed up subsequent runs. The cache may contain faulty results if a bug "
+"causes the format to corrupt, even after the bug is fixed. ``--clear`` "
+"flushes the cache, and therefore removes the bad results."
+msgstr ""

@@ -1,4 +1,4 @@
-[main-pot--doc-zh]
+[main]
 host = https://www.transifex.com
 
 [pipenv-doc.advanced-pot--doc-zh]
@@ -37,14 +37,14 @@ source_file = pot/install.pot
 source_lang = en_US
 type = PO
 
-[pipenv-doc.dev--contributing-pot--doc-zh]
-file_filter = <lang>/LC_MESSAGES/contributing.po
+[pipenv-doc.contributing-pot--doc-zh]
+file_filter = <lang>/LC_MESSAGES/dev/contributing.po
 source_file = pot/dev/contributing.pot
 source_lang = en_US
 type = PO
 
-[pipenv-doc.dev--philosophy-pot--doc-zh]
-file_filter = <lang>/LC_MESSAGES/philosophy.po
+[pipenv-doc.philosophy-pot--doc-zh]
+file_filter = <lang>/LC_MESSAGES/dev/philosophy.po
 source_file = pot/dev/philosophy.pot
 source_lang = en_US
 type = PO

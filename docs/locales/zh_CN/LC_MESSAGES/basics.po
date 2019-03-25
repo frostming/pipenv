@@ -1,0 +1,577 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2017. A <a href="http://kennethreitz.com/pages/open-projects.html">Kenneth Reitz</a> Project
+# This file is distributed under the same license as the pipenv package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Frost Ming <mianghong@gmail.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pipenv 2018.11.27.dev0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-18 13:38+0800\n"
+"PO-Revision-Date: 2019-03-18 05:40+0000\n"
+"Last-Translator: Frost Ming <mianghong@gmail.com>, 2019\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/pipenv-tr/teams/97305/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../basics.rst:4
+msgid "Basic Usage of Pipenv"
+msgstr "Pipenv的基本使用"
+
+#: ../../basics.rst:8
+msgid "This document covers some of Pipenv's more basic features."
+msgstr "这篇文档覆盖了Pipenv的一些基本特性。"
+
+#: ../../basics.rst:11
+msgid "☤ Example Pipfile & Pipfile.lock"
+msgstr "☤ Pipfile与Pipfile.lock示例"
+
+#: ../../basics.rst:15
+msgid ""
+"Here is a simple example of a ``Pipfile`` and the resulting "
+"``Pipfile.lock``."
+msgstr "下面是一个简单的 ``Pipfile`` 示例以及对应的 ``Pipfile.lock`` 。"
+
+#: ../../basics.rst:18
+msgid "Example Pipfile"
+msgstr "Pipfile示例"
+
+#: ../../basics.rst:36
+msgid "Example Pipfile.lock"
+msgstr "Pipfile.lock示例"
+
+#: ../../basics.rst:124
+msgid "☤ General Recommendations & Version Control"
+msgstr "☤ 一般推荐与版本控制"
+
+#: ../../basics.rst:126
+msgid ""
+"Generally, keep both ``Pipfile`` and ``Pipfile.lock`` in version control."
+msgstr "通常情况下，把 ``Pipfile`` 和 ``Pipfile.lock`` 都纳入版本控制。"
+
+#: ../../basics.rst:127
+msgid ""
+"Do not keep ``Pipfile.lock`` in version control if multiple versions of "
+"Python are being targeted."
+msgstr "当需要兼容多个Python版本时，请勿把  ``Pipfile.lock`` 纳入版本控制。"
+
+#: ../../basics.rst:128
+msgid ""
+"Specify your target Python version in your `Pipfile`'s ``[requires]`` "
+"section. Ideally, you should only have one target Python version, as this is"
+" a deployment tool."
+msgstr ""
+"在 ``Pipfile`` 中的 ``[requires]`` "
+"中指定你想要的Python版本。理想情况下，只有一个Python版本，因为这是一个部署工具。"
+
+#: ../../basics.rst:129
+msgid ""
+"``pipenv install`` is fully compatible with ``pip install`` syntax, for "
+"which the full documentation can be found `here "
+"<https://pip.pypa.io/en/stable/user_guide/#installing-packages>`_."
+msgstr ""
+"``pipenv install`` 语法与 ``pip install`` 完全兼容，完整文档可见 `这里 "
+"<https://pip.pypa.io/en/stable/user_guide/#installing-packages>`_ 。"
+
+#: ../../basics.rst:134
+msgid "☤ Example Pipenv Workflow"
+msgstr "☤ Pipenv工作流示例"
+
+#: ../../basics.rst:136
+msgid "Clone / create project repository::"
+msgstr "克隆、创建一个项目仓库::"
+
+#: ../../basics.rst:140
+msgid "Install from Pipfile, if there is one::"
+msgstr "如果已经有一个Pipfile，从Pipfile安装::"
+
+#: ../../basics.rst:144
+msgid "Or, add a package to your new project::"
+msgstr "或者，添加一个包到你的项目中::"
+
+#: ../../basics.rst:148
+msgid ""
+"This will create a ``Pipfile`` if one doesn't exist. If one does exist, it "
+"will automatically be edited with the new package you provided."
+msgstr "如果 ``Pipfile`` 不存在会创建一个。否则，它的内容会自动更新加入新的包。"
+
+#: ../../basics.rst:150
+msgid "Next, activate the Pipenv shell::"
+msgstr "接下来，激活Pipenv的终端::"
+
+#: ../../basics.rst:155
+msgid ""
+"This will spawn a new shell subprocess, which can be deactivated by using "
+"``exit``."
+msgstr "这会启动一个新的终端进程，可以通过 ``exit`` 来退出。"
+
+#: ../../basics.rst:160
+msgid "☤ Example Pipenv Upgrade Workflow"
+msgstr "☤ Pipenv升级工作流示例"
+
+#: ../../basics.rst:162
+msgid "Find out what's changed upstream: ``$ pipenv update --outdated``."
+msgstr "查看上游更新的内容: ``$ pipenv update --outdated``。"
+
+#: ../../basics.rst:165
+msgid "Upgrade packages, two options:"
+msgstr "升级包版本，有两种方法："
+
+#: ../../basics.rst:164
+msgid "Want to upgrade everything? Just do ``$ pipenv update``."
+msgstr "想要升级所有依赖包？只需要 ``$ pipenv update`` 。"
+
+#: ../../basics.rst:165
+msgid ""
+"Want to upgrade packages one-at-a-time? ``$ pipenv update <pkg>`` for each "
+"outdated package."
+msgstr "想要一个个升级包？对每一个包 ``$ pipenv update <pkg>`` 。"
+
+#: ../../basics.rst:168
+msgid "☤ Importing from requirements.txt"
+msgstr "☤ 从requirements.txt中导入"
+
+#: ../../basics.rst:170
+msgid ""
+"If you only have a ``requirements.txt`` file available when running ``pipenv"
+" install``, pipenv will automatically import the contents of this file and "
+"create a ``Pipfile`` for you."
+msgstr ""
+"如果你运行 ``pipenv install`` 时只有一个 ``requirements.txt``，pipenv会自动将文件内容导入进来为你创建一个"
+" ``Pipfile`` 。"
+
+#: ../../basics.rst:173
+msgid ""
+"You can also specify ``$ pipenv install -r path/to/requirements.txt`` to "
+"import a requirements file."
+msgstr ""
+"你也可以指定 ``$ pipenv install -r path/to/requirements.txt`` 导入某个requirements文件。"
+
+#: ../../basics.rst:175
+msgid ""
+"If your requirements file has version numbers pinned, you'll likely want to "
+"edit the new ``Pipfile`` to remove those, and let ``pipenv`` keep track of "
+"pinning.  If you want to keep the pinned versions in your ``Pipfile.lock`` "
+"for now, run ``pipenv lock --keep-outdated``.  Make sure to `upgrade "
+"<#initialization>`_ soon!"
+msgstr ""
+"如果你的requirements文件中锚定了版本号，你可能需要编辑新的 ``Pipfile`` 去掉它们，让 ``pipenv`` "
+"去管理版本。如果你需要保持 ``Pipfile.lock`` 中锚定的版本不变，运行 ``pipenv lock --keep-outdated`` "
+"。别忘了立刻 `更新 <#initialization>`_ ！"
+
+#: ../../basics.rst:183
+msgid "☤ Specifying Versions of a Package"
+msgstr "☤ 指定包的版本"
+
+#: ../../basics.rst:185
+msgid ""
+"You can specify versions of a package using the `Semantic Versioning scheme "
+"<https://semver.org/>`_ (i.e. ``major.minor.micro``)."
+msgstr ""
+"你可以使用 `语义版本规范 <https://semver.org/>`_ 指定包的版本(如： ``major.minor.micro``)。"
+
+#: ../../basics.rst:188
+msgid "For example, to install requests you can use: ::"
+msgstr "例如，安装requests你可以用：::"
+
+#: ../../basics.rst:192
+msgid ""
+"Pipenv will install version ``1.2`` and any minor update, but not ``2.0``."
+msgstr "Pipenv会安装 ``1.2`` 版本以及后续所有的次版本更新，但不包括 ``2.0`` 。"
+
+#: ../../basics.rst:194
+msgid ""
+"This will update your ``Pipfile`` to reflect this requirement, "
+"automatically."
+msgstr "这会自动更新你的 ``Pipfile`` 一反映最新变化。"
+
+#: ../../basics.rst:196
+msgid ""
+"In general, Pipenv uses the same specifier format as pip. However, note that"
+" according to `PEP 440`_ , you can't use versions containing a hyphen or a "
+"plus sign."
+msgstr "一般来说，Pipenv和pip使用相同的版本标识。但注意到 `PEP 440`_ ，你不能使用包含连字符与加号的版本。"
+
+#: ../../basics.rst:200
+msgid "To make inclusive or exclusive version comparisons you can use: ::"
+msgstr "要用包含与不包含的版本比较你可以用：::"
+
+#: ../../basics.rst:206
+msgid ""
+"The use of double quotes around the package and version specification (i.e. "
+"``\"requests>2.19\"``) is highly recommended to avoid issues with `Input and"
+" output redirection <https://robots.thoughtbot.com/input-output-redirection-"
+"in-the-shell>`_ in Unix-based operating systems."
+msgstr ""
+"高度推荐用双引号包裹包版本标识(如 ``\"requests>2.19\"``)，这是为了避免在基于Unix的操作系统中出现 `输入输出重定向问题 "
+"<https://robots.thoughtbot.com/input-output-redirection-in-the-shell>`_ 。"
+
+#: ../../basics.rst:210
+msgid ""
+"The use of ``~=`` is preferred over the ``==`` identifier as the latter "
+"prevents pipenv from updating the packages:  ::"
+msgstr "``~=`` 比 ``==`` 标识符更加推荐，因为后者会使得pipenv无法更新包：::"
+
+#: ../../basics.rst:214
+msgid ""
+"To avoid installing a specific version you can use the ``!=`` identifier."
+msgstr "要防止安装包的某个版本可以使用 ``!=`` 标识符。"
+
+#: ../../basics.rst:216
+msgid ""
+"For an in depth explanation of the valid identifiers and more complex use "
+"cases check `the relevant section of PEP-440`_."
+msgstr "想要获得关于有效标识符和更加复杂的使用方法请参考 `the relevant section of PEP-440`_ 。"
+
+#: ../../basics.rst:221
+msgid "☤ Specifying Versions of Python"
+msgstr "☤ 指定Python的版本"
+
+#: ../../basics.rst:223
+msgid ""
+"To create a new virtualenv, using a specific version of Python you have "
+"installed (and on your ``PATH``), use the ``--python VERSION`` flag, like "
+"so:"
+msgstr "想要使用一个已有的Python版本创建虚拟环境，使用 ``--python VERSON`` 选项，类似这样："
+
+#: ../../basics.rst:226
+msgid "Use Python 3::"
+msgstr "使用Python 3::"
+
+#: ../../basics.rst:230
+msgid "Use Python3.6::"
+msgstr "使用Python 3.6::"
+
+#: ../../basics.rst:234
+msgid "Use Python 2.7.14::"
+msgstr "使用Python 2.7.14::"
+
+#: ../../basics.rst:238
+msgid ""
+"When given a Python version, like this, Pipenv will automatically scan your "
+"system for a Python that matches that given version."
+msgstr "如果提供了Python版本，就像这样，Pipenv会自动扫描系统上和提供的版本匹配的Python。"
+
+#: ../../basics.rst:240
+msgid ""
+"If a ``Pipfile`` hasn't been created yet, one will be created for you, that "
+"looks like this::"
+msgstr "如果 ``Pipfile`` 还未创建会自动创建一个，看起来的效果是这样::"
+
+#: ../../basics.rst:253
+msgid ""
+"The inclusion of ``[requires] python_version = \"3.6\"`` specifies that your"
+" application requires this version of Python, and will be used automatically"
+" when running ``pipenv install`` against this ``Pipfile`` in the future "
+"(e.g. on other machines). If this is not true, feel free to simply remove "
+"this section."
+msgstr ""
+"``[requires] python_version = \"3.6\"`` 的加入说明你的应用需要这个版本的Python，以后在运行 "
+"``pipenv install`` 时会自动使用这个 ``Pipfile`` (比如在另一台机器上)。如果不能满足，可以自己删除这一节。"
+
+#: ../../basics.rst:257
+msgid ""
+"If you don't specify a Python version on the command–line, either the "
+"``[requires]`` ``python_full_version`` or ``python_version`` will be "
+"selected automatically, falling back to whatever your system's default "
+"``python`` installation is, at time of execution."
+msgstr ""
+"如果你没有在命令行中指定Python的版本，那么会自动选择 ``[requires]`` 中的``python_full_version`` 或 "
+"``python_version`` 。执行时候回退到当前系统的默认Python版本。"
+
+#: ../../basics.rst:262
+msgid "☤ Editable Dependencies (e.g. ``-e .`` )"
+msgstr "可修改依赖 (如 ``-e .`` )"
+
+#: ../../basics.rst:264
+msgid ""
+"You can tell Pipenv to install a path as editable — often this is useful for"
+" the current working directory when working on packages::"
+msgstr "你可以让Pipenv以可修改模式安装某个路径——通常用于开发Python包时，安装当前工作目录。"
+
+#: ../../basics.rst:275
+msgid ""
+"All sub-dependencies will get added to the ``Pipfile.lock`` as well. Sub-"
+"dependencies are **not** added to the ``Pipfile.lock`` if you leave the "
+"``-e`` option out."
+msgstr ""
+"所有次级依赖也会加到 ``Pipfile.lock`` 中。如果没有加 ``-e`` 选项次级依赖将 **不** 会加到 "
+"``Pipfile.lock`` 中。"
+
+#: ../../basics.rst:282
+msgid "☤ Environment Management with Pipenv"
+msgstr "☤ 用Pipenv管理环境"
+
+#: ../../basics.rst:284
+msgid ""
+"The three primary commands you'll use in managing your pipenv environment "
+"are ``$ pipenv install``, ``$ pipenv uninstall``, and ``$ pipenv lock``."
+msgstr ""
+"用来管理你的pipenv环境的三个主要命令是 ``$ pipenv install`` ， ``$ pipenv uninstall`` ， 以及 "
+"``$ pipenv lock`` 。"
+
+#: ../../basics.rst:290
+msgid "$ pipenv install"
+msgstr "$ pipenv install"
+
+#: ../../basics.rst:292
+msgid ""
+"``$ pipenv install`` is used for installing packages into the pipenv virtual"
+" environment and updating your Pipfile."
+msgstr "``$ pipenv install`` 用于把包安装到pipenv虚拟环境及更新Pipfile。"
+
+#: ../../basics.rst:295
+msgid "Along with the basic install command, which takes the form::"
+msgstr "与下面的形式的基本的安装命令一起::"
+
+#: ../../basics.rst:299
+msgid "The user can provide these additional parameters:"
+msgstr "用户可以提供这些额外的参数："
+
+#: ../../basics.rst:301
+msgid ""
+"``--two`` — Performs the installation in a virtualenv using the system "
+"``python2`` link."
+msgstr "``--two`` —— 在使用Python 2的虚拟环境中进行安装。"
+
+#: ../../basics.rst:302
+msgid ""
+"``--three`` — Performs the installation in a virtualenv using the system "
+"``python3`` link."
+msgstr "``--three`` —— 在使用Python 3的虚拟环境中进行安装。"
+
+#: ../../basics.rst:303
+msgid ""
+"``--python`` — Performs the installation in a virtualenv using the provided "
+"Python interpreter."
+msgstr "``--python`` —— 在使用给定Python解释器的虚拟环境中进行安装。"
+
+#: ../../basics.rst:305
+msgid ""
+"None of the above commands should be used together. They are also "
+"**destructive** and will delete your current virtualenv before replacing it "
+"with an appropriately versioned one."
+msgstr "上述的选项均不能同时使用。同时它们也是 **破坏性的**，会删除你当前的虚拟环境，然后替换成一个适当版本的环境。"
+
+#: ../../basics.rst:309
+msgid ""
+"The virtualenv created by Pipenv may be different from what you were "
+"expecting. Dangerous characters (i.e. ``$`!*@\"`` as well as space, line "
+"feed, carriage return, and tab) are converted to underscores. Additionally, "
+"the full path to the current folder is encoded into a \"slug value\" and "
+"appended to ensure the virtualenv name is unique."
+msgstr ""
+"Pipenv创建的虚拟环境可能与你预期的有所不同。危险字符(比如 ``$`!*@\"`` "
+"和空格、换行、制表符)会被替换成下划线。此外，当前目录的全路径会被编码成哈希值并追加到虚拟环境名称中来确保名称唯一。"
+
+#: ../../basics.rst:315
+msgid ""
+"``--dev`` — Install both ``develop`` and ``default`` packages from "
+"``Pipfile``."
+msgstr "``--dev`` —— 同时安装 ``Pipfile`` 中 ``develop`` 与 ``default`` 里面的包。"
+
+#: ../../basics.rst:316
+msgid ""
+"``--system`` — Use the system ``pip`` command rather than the one from your "
+"virtualenv."
+msgstr "``--system`` ——使用系统的 ``pip`` 命令而不是虚拟环境中的。"
+
+#: ../../basics.rst:317
+msgid ""
+"``--ignore-pipfile`` — Ignore the ``Pipfile`` and install from the "
+"``Pipfile.lock``."
+msgstr "``--ignore-pipfile`` ——忽略 ``Pipfile`` 直接从 ``Pipfile.lock`` 中安装。"
+
+#: ../../basics.rst:318
+msgid ""
+"``--skip-lock`` — Ignore the ``Pipfile.lock`` and install from the "
+"``Pipfile``. In addition, do not write out a ``Pipfile.lock`` reflecting "
+"changes to the ``Pipfile``."
+msgstr ""
+"``--skip-lock`` ——忽略 ``Pipfile.lock``，直接从 ``Pipfile`` 中安装。此外也不会更新 "
+"``Pipfile.lock`` 以跟踪 ``Pipfile`` 的变化。"
+
+#: ../../basics.rst:323
+msgid "$ pipenv uninstall"
+msgstr "$ pipenv uninstall"
+
+#: ../../basics.rst:325
+msgid ""
+"``$ pipenv uninstall`` supports all of the parameters in `pipenv install "
+"<#pipenv-install>`_, as well as two additional options, ``--all`` and "
+"``--all-dev``."
+msgstr ""
+"``$ pipenv uninstall`` 支持 `pipenv install <#pipenv-install>`_ "
+"中的全部参数，以及两个额外的选项， ``--all`` 和 ``--all-dev`` 。"
+
+#: ../../basics.rst:328
+msgid ""
+"``--all`` — This parameter will purge all files from the virtual "
+"environment, but leave the Pipfile untouched."
+msgstr "``--all`` ——此参数会删除虚拟环境所有的包，但不改变Pipfile。"
+
+#: ../../basics.rst:331
+msgid ""
+"``--all-dev`` — This parameter will remove all of the development packages "
+"from the virtual environment, and remove them from the Pipfile."
+msgstr "``--all-dev`` ——此参数会删除虚拟环境中所有的开发包，并从Pipfile中删除。"
+
+#: ../../basics.rst:338
+msgid "$ pipenv lock"
+msgstr "$ pipenv lock"
+
+#: ../../basics.rst:340
+msgid ""
+"``$ pipenv lock`` is used to create a ``Pipfile.lock``, which declares "
+"**all** dependencies (and sub-dependencies) of your project, their latest "
+"available versions, and the current hashes for the downloaded files. This "
+"ensures repeatable, and most importantly *deterministic*, builds."
+msgstr ""
+"``$ pipenv lock`` 用来创建一个 ``Pipfile.lock`` ，其中指明了项目的 **所有** "
+"依赖(及次级依赖)，它们的最新可以版本，与当前下载文件的哈希值。这确保了构建是可重复的，最重要是 **确定性** 的。"
+
+#: ../../basics.rst:343
+msgid "☤ About Shell Configuration"
+msgstr "☤ 关于终端配置"
+
+#: ../../basics.rst:345
+msgid ""
+"Shells are typically misconfigured for subshell use, so ``$ pipenv shell "
+"--fancy`` may produce unexpected results. If this is the case, try ``$ "
+"pipenv shell``, which uses \"compatibility mode\", and will attempt to spawn"
+" a subshell despite misconfiguration."
+msgstr ""
+"作为子终端使用时，终端通常是未配置的，因此 ``$ pipenv shell --fancy`` 可能会出现不可预料的结果。如果是这样，尝试使用 ``$"
+" pipenv shell`` ，它会使用「兼容模式」尝试启动一个未配置的子终端。"
+
+#: ../../basics.rst:347
+msgid ""
+"A proper shell configuration only sets environment variables like ``PATH`` "
+"during a login session, not during every subshell spawn (as they are "
+"typically configured to do). In fish, this looks like this::"
+msgstr ""
+"一个正确的终端配置仅在登录会话是设置类似 ``PATH`` "
+"的环境变量，而不是在每次子终端启动时(因为通常配置成这样做)。在fish中，这类似于下面这样::"
+
+#: ../../basics.rst:353
+msgid ""
+"You should do this for your shell too, in your ``~/.profile`` or "
+"``~/.bashrc`` or wherever appropriate."
+msgstr "你应该在你的终端里也这样做，放在你的 ``~/.profile`` or ``~/.bashrc`` 或者其他合适的地方。"
+
+#: ../../basics.rst:355
+msgid ""
+"The shell launched in interactive mode. This means that if your shell reads "
+"its configuration from a specific file for interactive mode (e.g. bash by "
+"default looks for a ``~/.bashrc`` configuration file for interactive mode), "
+"then you'll need to modify (or create) this file."
+msgstr ""
+"终端以交互模式启动。这表示如果你的终端从某个文件读取交互模式的配置(如bash默认为交互模式寻找 ``~/.bashrc`` "
+"配置文件)，你需要修改(或创建)这个文件。"
+
+#: ../../basics.rst:357
+msgid ""
+"If you experience issues with ``$ pipenv shell``, just check the "
+"``PIPENV_SHELL`` environment variable, which ``$ pipenv shell`` will use if "
+"available. For detail, see :ref:`configuration-with-environment-variables`."
+msgstr ""
+"如果你在用 ``$ pipenv shell`` 时遇到问题，检查一下 ``PIPENV_SHELL`` 环境变量，它若存在则会被 ``$ pipenv"
+" shell`` 使用。具体可参考 :ref:`configuration-with-environment-variables` 。"
+
+#: ../../basics.rst:360
+msgid "☤ A Note about VCS Dependencies"
+msgstr "☤ 关于版本控制系统依赖的注意事项"
+
+#: ../../basics.rst:362
+msgid ""
+"You can install packages with pipenv from git and other version control "
+"systems using URLs formatted according to the following rule::"
+msgstr "你可以用pipenv从git或其他版本控制系统安装依赖，使用的URL应遵循以下规则::"
+
+#: ../../basics.rst:366
+msgid ""
+"The only optional section is the ``@<branch_or_tag>`` section.  When using "
+"git over SSH, you may use the shorthand vcs and scheme alias "
+"``git+git@<location>:<user_or_organization>/<repository>@<branch_or_tag>#<package_name>``."
+" Note that this is translated to ``git+ssh://git@<location>`` when parsed."
+msgstr ""
+"仅有 ``@<branch_or_tag>`` 部分是可选的。当通过SSH连接git时，你可以用简短URL前缀 "
+"``git+git@<location>:<user_or_organization>/<repository>@<branch_or_tag>#<package_name>``"
+" ，在解析时会被转译为 ``git+ssh://git@<location>`` 。"
+
+#: ../../basics.rst:368
+msgid ""
+"Note that it is **strongly recommended** that you install any version-"
+"controlled dependencies in editable mode, using ``pipenv install -e``, in "
+"order to ensure that dependency resolution can be performed with an up to "
+"date copy of the repository each time it is performed, and that it includes "
+"all known dependencies."
+msgstr ""
+"注意， **强烈推荐** 你用可修改模式安装任何版本控制系统依赖，即 ``pipenv install -e`` "
+"，以确保每次解析依赖时在仓库的最新版本的基础上进行，并且正确包含所有已知依赖。"
+
+#: ../../basics.rst:370
+msgid ""
+"Below is an example usage which installs the git repository located at "
+"``https://github.com/requests/requests.git`` from tag ``v2.20.1`` as package"
+" name ``requests``::"
+msgstr ""
+"下面的例子演示了如何从git仓库 ``https://github.com/requests/requests.git`` 的 ``v2.20.1`` "
+"标签，以 ``requests`` 作包名安装::"
+
+#: ../../basics.rst:383
+msgid ""
+"Valid values for ``<vcs_type>`` include ``git``, ``bzr``, ``svn``, and "
+"``hg``.  Valid values for ``<scheme>`` include ``http``, ``https``, ``ssh``,"
+" and ``file``.  In specific cases you also have access to other schemes: "
+"``svn`` may be combined with ``svn`` as a scheme, and ``bzr`` can be "
+"combined with ``sftp`` and ``lp``."
+msgstr ""
+"``<vcs_type>`` 的有效值包括 ``git``， ``bzr``， ``svn`` 和 ``hg`` 。``<scheme>`` "
+"的有效值包括 ``http`` ， ``https`` ， ``ssh`` 和 ``file`` 。在特定情况下你也可以使用其他的前缀： ``svn``"
+" 可以和 ``svn`` 组合使用， ``bzr`` 可以和 ``sftp`` 或 ``lp`` 组合使用。"
+
+#: ../../basics.rst:385
+msgid ""
+"You can read more about pip's implementation of VCS support `here "
+"<https://pip.pypa.io/en/stable/reference/pip_install/#vcs-support>`_. For "
+"more information about other options available when specifying VCS "
+"dependencies, please check the `Pipfile spec "
+"<https://github.com/pypa/pipfile>`_."
+msgstr ""
+"可以到 `这里 <https://pip.pypa.io/en/stable/reference/pip_install/#vcs-support>`_"
+" 阅读更多pip对于版本控制系统支持的实现。更多关于其他版本控制系统依赖可选的选项，请参阅 "
+"`Pipfile标准<https://github.com/pypa/pipfile>`_ 。"
+
+#: ../../basics.rst:389
+msgid "☤ Pipfile.lock Security Features"
+msgstr "☤ Pipfile.lock安全特性"
+
+#: ../../basics.rst:391
+msgid ""
+"``Pipfile.lock`` takes advantage of some great new security improvements in "
+"``pip``. By default, the ``Pipfile.lock`` will be generated with the sha256 "
+"hashes of each downloaded package. This will allow ``pip`` to guarantee "
+"you're installing what you intend to when on a compromised network, or "
+"downloading dependencies from an untrusted PyPI endpoint."
+msgstr ""
+"``Pipfile.lock`` 利用了 ``pip`` 中的一些很好的安全改进。默认情况下， ``Pipfile.lock`` "
+"会生成所有已下载包的sha256哈希值。这使得 ``pip`` 在不安全网络情况下，保证你安装了你想要的包，或者从一个不信任的PyPI源下载依赖。"
+
+#: ../../basics.rst:396
+msgid ""
+"We highly recommend approaching deployments with promoting projects from a "
+"development environment into production. You can use ``pipenv lock`` to "
+"compile your dependencies on your development environment and deploy the "
+"compiled ``Pipfile.lock`` to all of your production environments for "
+"reproducible builds."
+msgstr ""
+"我们高度推荐将一个开放环境中的项目提升到生产环境来部署。你可以用 ``pipenv lock`` 来固化开发环境中的依赖，然后将生成的 "
+"``Pipfile.lock`` 部署到所有生产环境，来达到可复制构建的效果。"
