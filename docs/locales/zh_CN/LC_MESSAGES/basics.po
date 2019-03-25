@@ -547,8 +547,8 @@ msgid ""
 "<https://github.com/pypa/pipfile>`_."
 msgstr ""
 "可以到 `这里 <https://pip.pypa.io/en/stable/reference/pip_install/#vcs-support>`_"
-" 阅读更多pip对于版本控制系统支持的实现。更多关于其他版本控制系统依赖可选的选项，请参阅 "
-"`Pipfile标准<https://github.com/pypa/pipfile>`_ 。"
+" 阅读更多pip对于版本控制系统支持的实现。更多关于其他版本控制系统依赖可选的选项，请参阅 `Pipfile标准 "
+"<https://github.com/pypa/pipfile>`_ 。"
 
 #: ../../basics.rst:389
 msgid "☤ Pipfile.lock Security Features"
