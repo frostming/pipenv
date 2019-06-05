@@ -128,17 +128,17 @@ def test_keep_outdated_doesnt_upgrade_pipfile_pins(PipenvInstance, pypi):
 
 def test_keep_outdated_keeps_markers_not_removed(PipenvInstance, pypi):
     with PipenvInstance(chdir=True, pypi=pypi) as p:
-        c = p.pipenv("install tablib")
+        c = p.pipenv("install six click")
         assert c.ok
         lockfile = Path(p.lockfile_path)
         lockfile_content = lockfile.read_text()
         lockfile_json = json.loads(lockfile_content)
-        assert "tablib" in lockfile_json["default"]
-        lockfile_json["default"]["tablib"]["markers"] = "python_version >= '2.7'"
+        assert "six" in lockfile_json["default"]
+        lockfile_json["default"]["six"]["markers"] = "python_version >= '2.7'"
         lockfile.write_text(to_text(json.dumps(lockfile_json)))
         c = p.pipenv("lock --keep-outdated")
         assert c.ok
-        assert p.lockfile["default"]["tablib"].get("markers", "") == "python_version >= '2.7'"
+        assert p.lockfile["default"]["six"].get("markers", "") == "python_version >= '2.7'"
 
 
 @pytest.mark.lock
