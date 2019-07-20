@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipenv 2018.11.27.dev0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-03-27 11:12+0000\n"
+"POT-Creation-Date: 2019-07-20 13:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -366,5 +366,9 @@ msgstr ""
 
 #: ../../basics.rst:397
 msgid "We highly recommend approaching deployments with promoting projects from a development environment into production. You can use ``pipenv lock`` to compile your dependencies on your development environment and deploy the compiled ``Pipfile.lock`` to all of your production environments for reproducible builds."
+msgstr ""
+
+#: ../../basics.rst:404
+msgid "If you'd like a ``requirements.txt`` output of the lockfile, run ``$ pipenv lock -r``. This will include all hashes, however (which is great!). To get a ``requirements.txt`` without hashes, use ``$ pipenv run pip freeze``."
 msgstr ""
 
