@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipenv 2018.11.27.dev0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-27 03:38+0000\n"
+"POT-Creation-Date: 2019-07-20 13:49+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -256,6 +256,7 @@ msgid "Output diagnostic information for use in GitHub issues."
 msgstr ""
 
 #: ../../../pipenv:1
+#: ../../../pipenv install:1
 msgid "Enable site-packages for the virtualenv."
 msgstr ""
 
