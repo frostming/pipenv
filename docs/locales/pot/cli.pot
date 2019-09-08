@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pipenv 2018.11.27.dev0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-17 04:24+0000\n"
+"POT-Creation-Date: 2019-09-08 04:38+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -343,7 +343,7 @@ msgid "Spawns a shell within the virtualenv."
 msgstr ""
 
 #: ../../../pipenv shell:1
-msgid "Run in shell in fancy mode (for elegantly configured shells)."
+msgid "Run in shell in fancy mode. Make sure the shell have no path manipulating scripts. Run $pipenv shell for issues with compatibility mode."
 msgstr ""
 
 #: ../../../pipenv shell:1
