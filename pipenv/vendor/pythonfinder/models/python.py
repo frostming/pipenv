@@ -1,24 +1,24 @@
 # -*- coding=utf-8 -*-
 from __future__ import absolute_import, print_function
 
-import copy
 import logging
 import operator
 import platform
 import sys
 from collections import defaultdict
 
-import attr
+from pipenv.vendor import attr
 import six
 from packaging.version import Version
-from vistir.compat import Path, lru_cache
 
+from ..compat import Path, lru_cache
 from ..environment import ASDF_DATA_DIR, MYPY_RUNNING, PYENV_ROOT, SYSTEM_ARCH
 from ..exceptions import InvalidPythonVersion
 from ..utils import (
     RE_MATCHER,
     _filter_none,
     ensure_path,
+    expand_paths,
     get_python_version,
     guess_company,
     is_in_path,
@@ -46,9 +46,14 @@ if MYPY_RUNNING:
         Type,
         TypeVar,
         Iterator,
+        overload,
     )
     from .path import PathEntry
     from .._vendor.pep514tools.environment import Environment
+else:
+
+    def overload(f):
+        return f
 
 
 logger = logging.getLogger(__name__)
@@ -231,6 +236,7 @@ class PythonFinder(BaseFinder, BasePath):
         # type: () -> DefaultDict[str, PathEntry]
         return self.pythons
 
+    @overload
     @classmethod
     def create(cls, root, sort_function, version_glob_path=None, ignore_unsupported=True):
         # type: (str, Callable, Optional[str], bool) -> PythonFinder
@@ -281,12 +287,10 @@ class PythonFinder(BaseFinder, BasePath):
             ]
         else:
             pythons = [sub_finder(path) for path in self.paths]
-        pythons = [p for p in pythons if p and p.is_python and p.as_python is not None]
+        pythons = expand_paths(pythons, True)
         version_sort = operator.attrgetter("as_python.version_sort")
         paths = [
-            p
-            for p in sorted(list(pythons), key=version_sort, reverse=True)
-            if p is not None
+            p for p in sorted(pythons, key=version_sort, reverse=True) if p is not None
         ]
         return paths
 
@@ -501,7 +505,7 @@ class PythonVersion(object):
 
         for key in metadata:
             try:
-                current_value = getattr(self, key)
+                _ = getattr(self, key)
             except AttributeError:
                 continue
             else:
@@ -677,7 +681,7 @@ class VersionMap(object):
         # type: (...) -> None
         version = entry.as_python  # type: PythonVersion
         if version:
-            entries = self.versions[version.version_tuple]
+            _ = self.versions[version.version_tuple]
             paths = {p.path for p in self.versions.get(version.version_tuple, [])}
             if entry.path not in paths:
                 self.versions[version.version_tuple].append(entry)

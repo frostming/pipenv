@@ -39,6 +39,7 @@ def test_case_changes_windows(PipenvInstance):
 
 
 @pytest.mark.files
+@pytest.mark.local
 def test_local_path_windows(PipenvInstance):
     whl = (
         Path(__file__).parent.parent
@@ -53,6 +54,7 @@ def test_local_path_windows(PipenvInstance):
         assert c.return_code == 0
 
 
+@pytest.mark.local
 @pytest.mark.files
 def test_local_path_windows_forward_slash(PipenvInstance):
     whl = (
@@ -73,7 +75,7 @@ def test_pipenv_clean_windows(PipenvInstance):
     with PipenvInstance(chdir=True) as p:
         c = p.pipenv('install requests')
         assert c.return_code == 0
-        c = p.pipenv('run pip install click')
+        c = p.pipenv('run pip install -i {} click'.format(p.index_url))
         assert c.return_code == 0
 
         c = p.pipenv('clean --dry-run')

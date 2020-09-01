@@ -9,7 +9,7 @@ import pytest
 from pipenv.patched import pipfile
 from pipenv.project import Project
 from pipenv.utils import temp_environ
-from pipenv.vendor.vistir.path import is_in_path
+from pipenv.vendor.vistir.path import is_in_path, normalize_path
 from pipenv.vendor.delegator import run as delegator_run
 
 
@@ -121,6 +121,7 @@ def test_maintain_file_line_endings(PipenvInstance, newlines):
 
 @pytest.mark.project
 @pytest.mark.sources
+@pytest.mark.needs_internet
 def test_many_indexes(PipenvInstance):
     with PipenvInstance(chdir=True) as p:
         with open(p.pipfile_path, 'w') as f:
@@ -184,13 +185,15 @@ def test_run_in_virtualenv_with_global_context(PipenvInstance, virtualenv):
             project.virtualenv_location, virtualenv.as_posix()
         )
         c = delegator_run(
-            "pipenv run pip install click", cwd=os.path.abspath(p.path),
+            "pipenv run pip install -i {} click".format(p.index_url),
+            cwd=os.path.abspath(p.path),
             env=os.environ.copy()
         )
         assert c.return_code == 0, (c.out, c.err)
         assert "Courtesy Notice" in c.err, (c.out, c.err)
         c = delegator_run(
-            "pipenv install six", cwd=os.path.abspath(p.path), env=os.environ.copy()
+            "pipenv install -i {} six".format(p.index_url),
+            cwd=os.path.abspath(p.path), env=os.environ.copy()
         )
         assert c.return_code == 0, (c.out, c.err)
         c = delegator_run(
@@ -221,7 +224,9 @@ def test_run_in_virtualenv(PipenvInstance):
         assert c.return_code == 0
         c = p.pipenv('run python -c "import click;print(click.__file__)"')
         assert c.return_code == 0
-        assert c.out.strip().startswith(str(project.virtualenv_location))
+        assert normalize_path(c.out.strip()).startswith(
+            normalize_path(str(project.virtualenv_location))
+        )
         c = p.pipenv("clean --dry-run")
         assert c.return_code == 0
         assert "click" in c.out

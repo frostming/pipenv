@@ -15,9 +15,6 @@ Pipenv: Python Dev Workflow for Humans
 .. image:: https://img.shields.io/pypi/pyversions/pipenv.svg
     :target: https://pypi.python.org/pypi/pipenv
 
-.. image:: https://img.shields.io/badge/Say%20Thanks!-🦉-1EAEDB.svg
-    :target: https://saythanks.io/to/kennethreitz
-
 ---------------
 
 **Pipenv** is a tool that aims to bring the best of all packaging worlds (bundler, composer, npm, cargo, yarn, etc.) to the Python world. *Windows is a first-class citizen, in our world.*
@@ -87,7 +84,7 @@ User Testimonials
 - Automatically finds your project home, recursively, by looking for a ``Pipfile``.
 - Automatically generates a ``Pipfile``, if one doesn't exist.
 - Automatically creates a virtualenv in a standard location.
-- Automatically adds/removes packages to a ``Pipfile`` when they are un/installed.
+- Automatically adds/removes packages to a ``Pipfile`` when they are installed or uninstalled.
 - Automatically loads ``.env`` files, if they exist.
 
 The main commands are ``install``, ``uninstall``, and ``lock``, which generates a ``Pipfile.lock``. These are intended to replace ``$ pip install`` usage, as well as manual virtualenv management (to activate a virtualenv, run ``$ pipenv shell``).

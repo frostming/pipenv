@@ -71,7 +71,7 @@ Homebrew/Linuxbrew installer takes care of pip for you.
 ===================
 
 Pipenv is a dependency manager for Python projects. If you're familiar
-with Node.js' `npm`_ or Ruby's `bundler`_, it is similar in spirit to those
+with Node\.js's `npm`_ or Ruby's `bundler`_, it is similar in spirit to those
 tools. While pip can install Python packages, Pipenv is recommended as
 it's a higher-level tool that simplifies dependency management for common use
 cases.
@@ -80,28 +80,23 @@ cases.
 .. _bundler: http://bundler.io/
 
 
-☤ Homebrew Installation of Pipenv
----------------------------------
+☤ Isolated Installation of Pipenv with Pipx
+-------------------------------------------
 
-`Homebrew`_ is a popular open-source package management system for macOS. For Linux users, `Linuxbrew`_  is a Linux port of that.
+`Pipx`_ is a tool to help you install and run end-user applications written in Python. It installs applications
+into an isolated and clean environment on their own. To install pipx, just run::
 
-Installing pipenv via Homebrew or Linuxbrew will keep pipenv and all of its dependencies in
-an isolated virtual environment so it doesn't interfere with the rest of your
-Python installation.
+    $ pip install --user pipx
 
-Once you have installed Homebrew or Linuxbrew simply run::
+Once you have ``pipx`` ready on your system, continue to install Pipenv::
 
-    $ brew install pipenv
-
-To upgrade pipenv at any time::
-
-    $ brew upgrade pipenv
+    $ pipx install pipenv
 
 
 ☤ Pragmatic Installation of Pipenv
 ----------------------------------
 
-If you have a working installation of pip, and maintain certain "toolchain" type Python modules as global utilities in your user environment, pip `user installs <https://pip.pypa.io/en/stable/user_guide/#user-installs>`_ allow for installation into your home directory. Note that due to interaction between dependencies, you should limit tools installed in this way to basic building blocks for a Python workflow like virtualenv, pipenv, tox, and similar software.
+If you have a working installation of pip, and maintain certain "tool-chain" type Python modules as global utilities in your user environment, pip `user installs <https://pip.pypa.io/en/stable/user_guide/#user-installs>`_ allow for installation into your home directory. Note that due to interaction between dependencies, you should limit tools installed in this way to basic building blocks for a Python workflow like virtualenv, pipenv, tox, and similar software.
 
 To install::
 
@@ -146,7 +141,28 @@ To upgrade pipenv at any time::
 
 If you don't even have pip installed, you can use this crude installation method, which will bootstrap your whole system::
 
-    $ curl https://raw.githubusercontent.com/kennethreitz/pipenv/master/get-pipenv.py | python
+    $ curl https://raw.githubusercontent.com/pypa/pipenv/master/get-pipenv.py | python
+
+
+☤ Homebrew Installation of Pipenv(Discouraged)
+----------------------------------------------
+`Homebrew`_ is a popular open-source package management system for macOS. For Linux users, `Linuxbrew`_  is a Linux port of that.
+
+Installing pipenv via Homebrew or Linuxbrew will keep pipenv and all of its dependencies in
+an isolated virtual environment so it doesn't interfere with the rest of your
+Python installation.
+
+Once you have installed Homebrew or Linuxbrew simply run::
+
+    $ brew install pipenv
+
+To upgrade pipenv at any time::
+
+    $ brew upgrade pipenv
+
+.. Note::
+    Homebrew installation is discouraged because each time the Homebrew Python is upgraded, which Pipenv depends on,
+    users have to re-install Pipenv, and perhaps all virtual environments managed by it.
 
 
 ☤ Installing packages for your project
